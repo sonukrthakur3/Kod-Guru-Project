@@ -1,8 +1,8 @@
-# Design Document: Kod-Guru Socratic Debugger
+# Design Document: Nyx AI Socratic Debugger
 
 ## Overview
 
-Kod-Guru is a comprehensive Socratic learning platform that teaches programming and debugging through guided discovery, practice, and structured learning plans. The system consists of multiple client interfaces (React.js web app, Kiro extension, VS Code extension) and a Python FastAPI backend deployed on AWS Lambda that orchestrates AI-powered analysis using AWS Bedrock (Claude 3 Sonnet).
+Nyx AI is a comprehensive Socratic learning platform that teaches programming and debugging through guided discovery, practice, and structured learning plans. The system consists of multiple client interfaces (React.js web app, Kiro extension, VS Code extension) and a Python FastAPI backend deployed on AWS Lambda that orchestrates AI-powered analysis using AWS Bedrock (Claude 3 Sonnet).
 
 The platform offers three core learning modes:
 
@@ -995,7 +995,7 @@ class ConceptReview:
 
 ### DynamoDB Schema
 
-**Table: kod-guru-sessions**
+**Table: nyx-ai-sessions**
 
 ```python
 {
@@ -1030,7 +1030,7 @@ class ConceptReview:
 }
 ```
 
-**Table: kod-guru-practice-problems**
+**Table: nyx-ai-practice-problems**
 
 ```python
 {
@@ -1050,7 +1050,7 @@ class ConceptReview:
 }
 ```
 
-**Table: kod-guru-learning-plans**
+**Table: nyx-ai-learning-plans**
 
 ```python
 {
@@ -1090,7 +1090,7 @@ class ConceptReview:
 }
 ```
 
-**Table: kod-guru-user-progress**
+**Table: nyx-ai-user-progress**
 
 ```python
 {
@@ -1128,7 +1128,7 @@ class ConceptReview:
 }
 ```
 
-**Table: kod-guru-weekly-reviews**
+**Table: nyx-ai-weekly-reviews**
 
 ```python
 {
@@ -1715,7 +1715,7 @@ _For any_ concept with a retention score below 60, the System should flag it for
 **6. Extension Errors**
 
 - No code selected → Display notification "Please select code to analyze"
-- API connection failed → Display notification "Could not connect to Kod-Guru service. Please check your internet connection"
+- API connection failed → Display notification "Could not connect to Nyx AI service. Please check your internet connection"
 - Session expired → Display notification "Your session has expired. Please start a new analysis"
 
 **7. Practice Problem Errors**
@@ -1786,7 +1786,7 @@ Both approaches are complementary and necessary. Unit tests catch concrete bugs 
 
 - Each property test must run a minimum of 100 iterations
 - Each test must include a comment tag referencing the design property
-- Tag format: `# Feature: kod-guru, Property {N}: {property_text}`
+- Tag format: `# Feature: nyx-ai, Property {N}: {property_text}`
 
 **Property Test Implementation:**
 
@@ -1815,7 +1815,7 @@ Unit tests should focus on:
 from hypothesis import given, strategies as st
 import pytest
 
-# Feature: kod-guru, Property 10: Unique Session Creation
+# Feature: nyx-ai, Property 10: Unique Session Creation
 @given(
     code=st.text(min_size=1),
     error_log=st.text(),
@@ -1838,7 +1838,7 @@ def test_unique_session_creation(code, error_log, language):
 ```typescript
 import fc from "fast-check";
 
-// Feature: kod-guru, Property 4: Empty Input Validation
+// Feature: nyx-ai, Property 4: Empty Input Validation
 test("empty input validation", () => {
   fc.assert(
     fc.property(
