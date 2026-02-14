@@ -2,11 +2,11 @@
 
 ## Introduction
 
-Kod-Guru is a Socratic learning tool designed to help computer science students and junior developers learn debugging and programming concepts through guided discovery rather than immediate solutions. The system analyzes code (broken or working) and optionally error logs, then guides users through a progressive hinting system with prerequisite concepts to help them understand and improve their code, reinforcing learning through active problem-solving. The tool is available as a web application and as editor extensions for Kiro and VS Code.
+Nyx AI is a Socratic learning tool designed to help computer science students and junior developers learn debugging and programming concepts through guided discovery rather than immediate solutions. The system analyzes code (broken or working) and optionally error logs, then guides users through a progressive hinting system with prerequisite concepts to help them understand and improve their code, reinforcing learning through active problem-solving. The tool is available as a web application and as editor extensions for Kiro and VS Code.
 
 ## Glossary
 
-- **System**: The Kod-Guru application (web app, Kiro extension, or VS Code extension)
+- **System**: The Nyx AI application (web app, Kiro extension, or VS Code extension)
 - **Code_Editor**: The frontend interface component for code input
 - **Analysis_Engine**: The backend component that uses AWS Bedrock to analyze code
 - **Hint_Generator**: The component responsible for generating progressive hints with prerequisites
@@ -15,7 +15,7 @@ Kod-Guru is a Socratic learning tool designed to help computer science students 
 - **Image_Parser**: The component that extracts code from uploaded images
 - **Practice_Problem_Generator**: The component that creates similar problems for practice
 - **Learning_Plan_Generator**: The component that creates structured learning plans based on user goals
-- **Extension**: The editor plugin version of Kod-Guru (Kiro or VS Code)
+- **Extension**: The editor plugin version of Nyx AI (Kiro or VS Code)
 - **User**: A student or junior developer using the tool
 - **Session**: A single learning interaction from code submission to completion
 - **Hint_Stage**: The current level of hint specificity (1=vague, 2=specific, 3=solution)
@@ -160,7 +160,7 @@ Kod-Guru is a Socratic learning tool designed to help computer science students 
 
 ### Requirement 11: Editor Extensions
 
-**User Story:** As a developer, I want to use Kod-Guru directly in my editor, so that I can learn without leaving my development environment.
+**User Story:** As a developer, I want to use Nyx AI directly in my editor, so that I can learn without leaving my development environment.
 
 #### Acceptance Criteria
 
@@ -245,7 +245,7 @@ Kod-Guru is a Socratic learning tool designed to help computer science students 
 
 ### Requirement 17: Responsive Design
 
-**User Story:** As a user, I want to access Kod-Guru on any device (PC, tablet, mobile), so that I can learn programming wherever I am.
+**User Story:** As a user, I want to access Nyx AI on any device (PC, tablet, mobile), so that I can learn programming wherever I am.
 
 #### Acceptance Criteria
 
